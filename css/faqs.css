@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto",sans-serif;
+    text-decoration: none;
+}
+
+
+body{
+    background: linear-gradient(125deg, #a52d2d, #f15553, #b30f53);
+    background-attachment: fixed;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    transition: background 0.5s ease;
+} 
+
+/* navbar starts */
+.main-nav{
+    background-color: transparent;
+    padding: 10px 40px;
+    display: flex;           
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+    font-family:sans-serif;
+    margin-top: 15px;
+    gap: 40px;
+    transition: all 0.4s ease;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    height: 70px;
+    width: 100%;
+    background-color: transparent;
+    font-family: sans-serif;
+    gap: 40px;
+}
+
+.nav-pages{
+    display: flex;
+    gap: 20px;
+}
+
+.subnav{
+    color: white;
+    padding: 14px 12px;
+    font-size: 25px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.4s ease;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subnav:hover{
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+.subnav::after{
+    content: "";
+    position: absolute;
+    left: 20px;
+    width: 0%;
+    height: 3px;
+    bottom: 10px;
+    background-origin: 10px;
+    background-color:#FFD700 ;
+    transition: width 0.3s ease;
+}
+
+.subnav:hover::after{
+    width: 70%;
+}
+
+.navbtn {
+    background-color: white;
+    color: #f15553;
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbtn:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.wrapper{
+    max-width: 75%;
+    margin: auto;
+}
+
+.wrapper > p,
+.wrapper > h1{
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.wrapper > h1{
+    letter-spacing: 3px;
+}
+
+.accordion{
+    background-color: white;
+    color: rgba(0,0,0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.accordion i{
+    font-size: 1.6rem;
+}
+
+.active,
+.accordion:hover{
+    background-color: rgb(238, 137, 137);
+}
+
+.pannel{
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: #e91e63;
+    overflow: hidden;
+}
+
+.pannel p{
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.faq{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.faq.active{
+    border: none;
+}
+
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.pannel{
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+input[type="checkbox"]:checked + label{
+    background-color: rgb(238, 137, 137);
+}
+
+input[type="checkbox"]:checked + label + .pannel{
+    max-height: 300px;
+    padding: 1.5rem 2rem;
+}
+
+input[type="checkbox"]:checked + label i {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}

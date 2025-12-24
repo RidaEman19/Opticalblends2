@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Navbar starts -->
+<!-- <nav class="main-nav">
+     <div class="logo-nb">
+            <img src="../images/white logo.png" alt="Blessed Moments Logo" style="height:50px;">
+
+        </div>
+    <div class="nav-pages">
+        <a class="subnav" href="../html/index.html">Home</a>
+        <a class="subnav" href="../html/about.html">About Us</a>
+        <a class="subnav" href="../html/festivals.html">Festivals</a>
+        <a class="subnav" href="../html/contact.html">Contact</a>
+    </div>
+    <button class="navbtn">Sign In</button>
+</nav> -->
+<!-- Navbar ends -->
+
+<video autoplay loop muted playsinline class="bg-video1">
+    <source src="../images/form-video.mp4" type="video/mp4">
+</video>
+
+<div class="container1">
+    <div class="card1">
+        
+        <h2>Sign Up</h2>
+
+        <div class="input-group1">
+            <input type="email" id="email1" placeholder="Enter your email">
+        </div>
+
+        <div class="input-group1">
+            <input type="password" id="password1" placeholder="Enter your password">
+        </div>
+
+        <div class="input-group1">
+            <input type="password" id="confirm-password1" placeholder="Confirm your password">
+        </div>
+
+        <button class="login-btn1" onclick="signup()">Signup</button>
+
+        <div class="form-options1">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function signup() {
+        let email = document.getElementById("email1").value;
+        let password = document.getElementById("password1").value;
+        let confirmPassword = document.getElementById("confirm-password1").value;
+
+        if (email === "" || password === "" || confirmPassword === "") {
+            alert("Please fill all fields!");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        alert("Signup Successful (Demo)");
+    }
+</script>
